@@ -88,7 +88,7 @@ for(let i=1; i<101; i++) {
     console.log(result);
 }  */
 
-// Stretch Goal 3: If a number is a multiple of 13, print "Fezz". 
+/* // Stretch Goal 3: If a number is a multiple of 13, print "Fezz". 
 //                 For multiples of most other numbers, the Fezz goes immediately 
 //                 in front of the first thing beginning with B, or at the end if 
 //                 there are none. 
@@ -103,4 +103,19 @@ for(let i=1; i<201; i++) {
     if (result === "") result = i;
 
     console.log(result);
+}  */
+
+// Stretch Goal 4: If a number is a multiple of 17, reverse the order 
+//                 in which any fizzes, buzzes, bangs etc. are printed. 
+for(let i=1; i<301; i++) {
+    let result = [];
+    if ((i%3 === 0) && (i%11 !== 0)) result.push("Fizz");
+    if (i%13 === 0) result.push("Fezz");
+    if (i%11 === 0) result.push("Bong");
+    if ((i%11 !== 0) && (i%5 === 0)) result.push("Buzz");
+    if ((i%11 !== 0) && (i%7 === 0)) result.push("Bang");
+    if (i%17 === 0) result.reverse();
+    if (result.length === 0) result.push(i);
+
+    console.log(result.join(""));
 } 
