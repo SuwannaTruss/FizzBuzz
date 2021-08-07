@@ -65,7 +65,7 @@ for(let i=1; i<101; i++) {
     console.log(result);
 }  */
 
-// Stretch Goal 2: If a number is a multiple of 11, print "Bong". 
+/* // Stretch Goal 2: If a number is a multiple of 11, print "Bong". 
 //                 Only print "bong" evenif there are multiple factors for the number.
 for(let i=1; i<101; i++) {
     let result = "";
@@ -85,5 +85,22 @@ for(let i=1; i<101; i++) {
     if (result === "") {
         result = i;
     }  
+    console.log(result);
+}  */
+
+// Stretch Goal 3: If a number is a multiple of 13, print "Fezz". 
+//                 For multiples of most other numbers, the Fezz goes immediately 
+//                 in front of the first thing beginning with B, or at the end if 
+//                 there are none. 
+for(let i=1; i<201; i++) {
+    let result = "";
+    if (i%3 === 0) result = "Fizz";
+    if (i%13 === 0) result += "Fezz";
+    if (i%5 === 0) result += "Buzz";
+    if (i%7 === 0) result += "Bang";
+    if (i%11 === 0) result = "Bong";
+    if ((i%11 === 0) && (i%13 === 0)) result = "FezzBong";
+    if (result === "") result = i;
+
     console.log(result);
 } 
