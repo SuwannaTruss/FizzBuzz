@@ -15,8 +15,11 @@ for(let i=1; i<101; i++) {
     }
     console.log(result);
 } */
+var result = [...Array(100)].map((_,i) => ((i+1)%3 === 0) ? "Fizz" : (i+1));
+console.log(result);
 
-//Part 4: add rule - print “Buzz” whenever the number is a multiple of 5
+
+/* //Part 4: add rule - print “Buzz” whenever the number is a multiple of 5
 for(let i=1; i<101; i++) {
     let result;
     if ((i%3 === 0) && (i%5 === 0)) {
@@ -29,4 +32,4 @@ for(let i=1; i<101; i++) {
         result = i;
     }
     console.log(result);
-}
+} */
